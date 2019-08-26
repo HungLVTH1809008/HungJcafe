@@ -16,12 +16,12 @@ class CreateTableCustomer extends Migration
         Schema::create('Customer', function (Blueprint $table) {
             $table->bigIncrements('Customer_id');
             $table->string("Customer_name");
-            $table->unsignedBigInteger("Product_id");
-            $table->date("Birthday");
+            $table->integer("Product_id");
+            $table->string("Birthday");
             $table->string("Address");
             $table->string("Email");
-            $table->integerIncrements("PhoneNumber");
-            $table->unsignedTinyInteger("active")->default(1);
+            $table->integer("PhoneNumber");
+            $table->integer("active")->default(1);
             $table->timestamps();
         });
     }

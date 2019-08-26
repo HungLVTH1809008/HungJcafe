@@ -17,8 +17,8 @@ class CreateTableOrderdetail extends Migration
             $table->bigIncrements('OrderDetail_id');
             $table->unsignedBigInteger("Order_id");
             $table->unsignedBigInteger("Product_id");
-            $table->integerIncrements("Quantity");
-            $table->unsignedTinyInteger("active")->default(1);
+            $table->integer("Quantity");
+            $table->integer("active")->default(1);
             $table->timestamps();
         });
     }

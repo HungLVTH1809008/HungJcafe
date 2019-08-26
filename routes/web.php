@@ -15,3 +15,5 @@ Route::get('/', function () { //khai bao
     return view('welcome');
 });
 Route::get("/quan_ly_Product","DemoController@ProductList");
+
+Route::get("/danh-sach-user","DemoController@danhsach");

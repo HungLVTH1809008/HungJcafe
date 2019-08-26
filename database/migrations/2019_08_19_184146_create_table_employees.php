@@ -19,10 +19,10 @@ class CreateTableEmployees extends Migration
             $table->unsignedBigInteger("Order_id");
             $table->string("sex");
             $table->string("Address");
-            $table->integerIncrements("PhoneNumber");
-            $table->string("IMail");
+            $table->integer("PhoneNumber");
+            $table->string("EMail");
             $table->date("birthday");
-            $table->unsignedTinyInteger("active")->default(1);
+            $table->integer("active")->default(1);
             $table->timestamps();
         });
     }

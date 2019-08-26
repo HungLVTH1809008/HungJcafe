@@ -4,6 +4,7 @@
 
 use App\author;
 use App\User;
+use App\Employees;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
@@ -27,13 +28,30 @@ $factory->define(User::class, function (Faker $faker) {
         'remember_token' => Str::random(10),
     ];
 });
-
-$factory->define(App\Product::class, function (Faker $faker) {
-
-    return [
-
-        "Product_name" => $faker->unique()->name,
-
-    ];
-
-});
+//
+//$factory->define(App\Product::class, function (Faker $faker) {
+//
+//    return [
+//
+//        "Product_name" => $faker->unique()->name,
+//
+//    ];
+//
+////});
+//$factory->define(App\Employees::class, function (Faker $faker) {
+//
+//    return [
+//
+//        "employees_id" => $faker -> randomFloat(0,1,100),
+//        "Employees_name" => $faker -> name,
+//        "Order_id" => $faker -> randomFloat(0,1,100),
+//        "sex" => $faker -> boolean,
+//        "Address" => $faker -> address,
+//        "PhoneNumber" => $faker -> phoneNumber,
+//        "EMail" => $faker -> email,
+//        "birthday" => $faker -> dateTime,
+//        "active"  => $faker -> boolean,
+//
+//    ];
+//
+//});
